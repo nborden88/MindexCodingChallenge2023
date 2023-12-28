@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ukZOBKeXd4qUZP7+w2H21DmrSPusQRXDbznqyPVM8wNife/x16k1VOl2pbGeKgUyE5RX7UPwUnvoV6lrrDs+vg==",
+  "dgSpecHash": "Xc8fmiqjDuN45ljwMSfm7VJuTNa5qVH7Cdxhw5ZNMN9p5CDs66sVBH/wxCrKcRU5LfCumKMkRcCKlctA3mB/6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+  "projectFilePath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\CodeChallenge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nbord\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.5\\microsoft.aspnetcore.jsonpatch.6.0.5.nupkg.sha512",
     "C:\\Users\\nbord\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

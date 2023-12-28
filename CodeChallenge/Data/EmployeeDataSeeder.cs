@@ -24,7 +24,7 @@ namespace CodeChallenge.Data
             {
                 List<Employee> employees = LoadEmployees();
                 _employeeContext.Employees.AddRange(employees);
-
+               
                 await _employeeContext.SaveChangesAsync();
             }
         }

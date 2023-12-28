@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace CodeChallenge.Config
 {
@@ -41,9 +42,11 @@ namespace CodeChallenge.Config
 
         private void AddServices(IServiceCollection services)
         {
-
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IEmployeeRepository, EmployeeRespository>();
+
+            // Added by nborden88 12/27/2023
+            services.AddScoped<IReportingStructureService, ReportingStructureService>();
 
             services.AddControllers();
         }

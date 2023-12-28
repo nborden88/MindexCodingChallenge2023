@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {}
+    "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\CodeChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {
+    "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\CodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\CodeChallenge.csproj",
         "projectName": "CodeChallenge",
-        "projectPath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectPath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\CodeChallenge.csproj",
         "packagesPath": "C:\\Users\\nbord\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MIndex-dotnet-code-challenge\\CodeChallenge\\obj\\",
+        "outputPath": "C:\\Users\\nbord\\OneDrive\\Documents\\Visual Studio 2022\\Projects\\MindexDotnetCodingChallenge2023_v2\\CodeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nbord\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -20,7 +20,6 @@ namespace CodeCodeChallenge.Tests.Integration.Helpers
             return applicationFactory.CreateClient();
         }
 
-
         public ValueTask DisposeAsync()
         {
             return ((IAsyncDisposable)applicationFactory).DisposeAsync();

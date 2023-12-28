@@ -29,6 +29,7 @@ namespace CodeChallenge.Repositories
 
         public Employee GetById(string id)
         {
+            _logger.LogInformation($"Getting employee data for {id}");
             return _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
         }
 

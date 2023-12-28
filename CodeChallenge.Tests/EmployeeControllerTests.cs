@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -9,6 +11,7 @@ using CodeCodeChallenge.Tests.Integration.Extensions;
 using CodeCodeChallenge.Tests.Integration.Helpers;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 
 namespace CodeCodeChallenge.Tests.Integration
 {
@@ -71,6 +74,7 @@ namespace CodeCodeChallenge.Tests.Integration
             var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
             var expectedFirstName = "John";
             var expectedLastName = "Lennon";
+            var expectedDirectReportsCount = 2;
 
             // Execute
             var getRequestTask = _httpClient.GetAsync($"api/employee/{employeeId}");
@@ -81,6 +85,7 @@ namespace CodeCodeChallenge.Tests.Integration
             var employee = response.DeserializeContent<Employee>();
             Assert.AreEqual(expectedFirstName, employee.FirstName);
             Assert.AreEqual(expectedLastName, employee.LastName);
+            Assert.AreEqual(expectedDirectReportsCount, employee.DirectReports == null ? -1 : employee.DirectReports.Count);
         }
 
         [TestMethod]
@@ -131,6 +136,57 @@ namespace CodeCodeChallenge.Tests.Integration
 
             // Assert
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [TestMethod]
+        public void GetReportingStructureByEmployeeId_Returns_OK_4()
+        {
+            //Arrange
+            var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
+            var expectedNumberOfReports = 4;
+
+            // Execute
+            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
+            var response = getRequestTask.Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var reportingStructure = response.DeserializeContent<ReportingStructure>();
+            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
+        }
+
+        [TestMethod]
+        public void GetReportingStructureByEmployeeId_Returns_OK_2()
+        {
+            //Arrange
+            var employeeId = "03aa1462-ffa9-4978-901b-7c001562cf6f";
+            var expectedNumberOfReports = 2;
+
+            // Execute
+            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
+            var response = getRequestTask.Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var reportingStructure = response.DeserializeContent<ReportingStructure>();
+            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
+        }
+
+        [TestMethod]
+        public void GetReportingStructureByEmployeeId_Returns_OK_0()
+        {
+            //Arrange
+            var employeeId = "62c1084e-6e34-4630-93fd-9153afb65309";
+            var expectedNumberOfReports = 0;
+
+            // Execute
+            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
+            var response = getRequestTask.Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var reportingStructure = response.DeserializeContent<ReportingStructure>();
+            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
         }
     }
 }
