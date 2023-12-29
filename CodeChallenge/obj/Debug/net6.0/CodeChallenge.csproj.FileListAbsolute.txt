@@ -66,3 +66,4 @@ C:\Users\nbord\OneDrive\Documents\Visual Studio 2022\Projects\MindexDotnetCoding
 C:\Users\nbord\OneDrive\Documents\Visual Studio 2022\Projects\MindexDotnetCodingChallenge2023_v2\CodeChallenge\obj\Debug\net6.0\CodeChallenge.pdb
 C:\Users\nbord\OneDrive\Documents\Visual Studio 2022\Projects\MindexDotnetCodingChallenge2023_v2\CodeChallenge\obj\Debug\net6.0\CodeChallenge.genruntimeconfig.cache
 C:\Users\nbord\OneDrive\Documents\Visual Studio 2022\Projects\MindexDotnetCodingChallenge2023_v2\CodeChallenge\obj\Debug\net6.0\ref\CodeChallenge.dll
+C:\Users\nbord\OneDrive\Documents\Visual Studio 2022\Projects\MindexDotnetCodingChallenge2023_v2\CodeChallenge\bin\Debug\net6.0\resources\CompensationSeedData.json

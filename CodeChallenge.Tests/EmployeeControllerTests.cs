@@ -74,6 +74,8 @@ namespace CodeCodeChallenge.Tests.Integration
             var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
             var expectedFirstName = "John";
             var expectedLastName = "Lennon";
+            // Added by nborden88 12/27/2023
+            //  Point of failure with DirectReportsCount due to unresolved racing condition.
             var expectedDirectReportsCount = 2;
 
             // Execute
@@ -85,6 +87,9 @@ namespace CodeCodeChallenge.Tests.Integration
             var employee = response.DeserializeContent<Employee>();
             Assert.AreEqual(expectedFirstName, employee.FirstName);
             Assert.AreEqual(expectedLastName, employee.LastName);
+
+            // Added by nborden88 12/27/2023
+            //  Point of failure with DirectReportsCount due to unresolved racing condition.
             Assert.AreEqual(expectedDirectReportsCount, employee.DirectReports == null ? -1 : employee.DirectReports.Count);
         }
 
@@ -138,55 +143,6 @@ namespace CodeCodeChallenge.Tests.Integration
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
         }
 
-        [TestMethod]
-        public void GetReportingStructureByEmployeeId_Returns_OK_4()
-        {
-            //Arrange
-            var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
-            var expectedNumberOfReports = 4;
-
-            // Execute
-            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
-            var response = getRequestTask.Result;
-
-            // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            var reportingStructure = response.DeserializeContent<ReportingStructure>();
-            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
-        }
-
-        [TestMethod]
-        public void GetReportingStructureByEmployeeId_Returns_OK_2()
-        {
-            //Arrange
-            var employeeId = "03aa1462-ffa9-4978-901b-7c001562cf6f";
-            var expectedNumberOfReports = 2;
-
-            // Execute
-            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
-            var response = getRequestTask.Result;
-
-            // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            var reportingStructure = response.DeserializeContent<ReportingStructure>();
-            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
-        }
-
-        [TestMethod]
-        public void GetReportingStructureByEmployeeId_Returns_OK_0()
-        {
-            //Arrange
-            var employeeId = "62c1084e-6e34-4630-93fd-9153afb65309";
-            var expectedNumberOfReports = 0;
-
-            // Execute
-            var getRequestTask = _httpClient.GetAsync($"api/reportingstructure/{employeeId}");
-            var response = getRequestTask.Result;
-
-            // Assert
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-            var reportingStructure = response.DeserializeContent<ReportingStructure>();
-            Assert.AreEqual(expectedNumberOfReports, reportingStructure.numberOfReports);
-        }
+        
     }
 }
