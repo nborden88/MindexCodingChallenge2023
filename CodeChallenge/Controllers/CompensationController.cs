@@ -9,6 +9,10 @@ using CodeChallenge.Models;
 
 namespace CodeChallenge.Controllers
 {
+    // Added by nborden88 12/29/2023
+    /// <summary>
+    /// Controller object for Employee Compensation
+    /// </summary>
     [ApiController]
     [Route("api/compensation")]
     public class CompensationController : Controller

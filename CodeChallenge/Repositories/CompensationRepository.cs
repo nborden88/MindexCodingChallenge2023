@@ -9,6 +9,7 @@ using CodeChallenge.Data;
 
 namespace CodeChallenge.Repositories
 {
+    // Added by nborden88 12/29/2023
     public class CompensationRepository : ICompensationRepository
     {
         private readonly CompensationContext _compensationContext;

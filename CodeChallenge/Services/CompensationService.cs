@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace CodeChallenge.Services
 {
+    // Added by nborden88 12/29/2023
     public class CompensationService : ICompensationService
     {
         private readonly ICompensationRepository _compensationRepository;

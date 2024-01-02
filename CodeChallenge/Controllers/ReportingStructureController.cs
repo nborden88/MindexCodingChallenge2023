@@ -1,11 +1,11 @@
-﻿// Created by nborden88 12/27/2023
-using CodeChallenge.Services;
+﻿using CodeChallenge.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 
 namespace CodeChallenge.Controllers
 {
+    // Added by nborden88 12/27/2023
     /// <summary>
     /// Controller object for ReportingStructure
     /// </summary>
